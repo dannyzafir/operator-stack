@@ -47,10 +47,10 @@ Every surface you would normally check said fine:
 - The timer was enabled and firing on schedule.
 
 The one fact that mattered, that the remote had not advanced, lived somewhere nobody was looking.
-
 **The fix.** Give the service the environment it needs, in the unit itself:
 
-```ini
+```
+Environment=HOME=/home/<username>
 Environment=GH_CONFIG_DIR=/home/<username>/.config/gh
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```

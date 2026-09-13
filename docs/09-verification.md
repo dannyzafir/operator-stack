@@ -94,7 +94,7 @@ From [Incident 3: The curator that curated itself](08-what-breaks.md):
 
 From [Incident 4: The 429 with nowhere to fall back to](08-what-breaks.md):
 - Every profile running unattended work must have a fallback chain configured
-- Verify fallback loaded: `hermes -p <profile> config get fallback_providers`
+- Verify fallback loaded: read the profile config directly (the CLI flag varies by version)
 - When creating a new profile, copy the safety nets from existing profiles or prove deliberate omission
 
 ---
