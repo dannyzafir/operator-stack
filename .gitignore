@@ -1,0 +1,20 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Dependencies and operating-system/editor files
+node_modules/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Test and temporary output
+tmp/
+temp/
+test-results/
+*.log
+
+# Internal planning record; not part of the public MVP
+DECISIONS.md
