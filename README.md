@@ -67,35 +67,38 @@ The machines do not directly sync files. GitHub carries reviewed history between
 
 See [docs/01-architecture.md](docs/01-architecture.md) for the full model.
 
+## Build your stack first
+
+Don't copy this stack. Build yours.
+
+Take the [Stack Audit](https://www.dannyzafir.com/stack/audit) — a free, deterministic questionnaire that produces a personalized architecture based on your setup, budget, and privacy needs. Your answers stay in your browser. No account required.
+
+The audit gives you the plan. This repo gives you the pieces to build and verify it.
+
 ## Quick start
 
-1. Clone the repository:
+Once you have your architecture from the audit, use these scripts to check readiness and verify outcomes:
 
-   ```bash
-   git clone https://github.com/dannyzafir/operator-stack.git
-   cd operator-stack
-   ```
-
-2. Copy the optional configuration template:
+1. Copy the optional configuration template:
 
    ```bash
    cp .env.example .env
    chmod 600 .env
    ```
 
-3. Check prerequisites and configuration:
+2. Check prerequisites and configuration:
 
    ```bash
    bash scripts/doctor.sh
    ```
 
-4. Verify an outcome:
+3. Verify an outcome:
 
    ```bash
    bash scripts/verify.sh --check file-recent /path/to/output.md 24
    ```
 
-5. Synchronize a clean repository safely:
+4. Synchronize a clean repository safely:
 
    ```bash
    bash scripts/git-sync-safe.sh /path/to/repo https://github.com/<your-username>/your-repo.git
@@ -157,7 +160,9 @@ The newsletter is the primary next step for readers who want to keep moving from
 
 ## Foreground Tax diagnostic
 
-If your business is carrying Foreground Tax—if growth still depends on you staying personally involved in every step—take the [Foreground Tax diagnostic](https://www.dannyzafir.com/a) to map where the tax lives.
+If your business is carrying Foreground Tax—if growth still depends on you staying personally involved in every step—take the [Stack Audit](https://www.dannyzafir.com/stack/audit) to map where the tax lives and get a personalized architecture.
+
+The [Foreground Tax diagnostic](https://www.dannyzafir.com/a) maps where the tax lives. The Stack Audit builds your architecture from that diagnosis.
 
 ## License
 
