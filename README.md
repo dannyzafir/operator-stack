@@ -79,9 +79,11 @@ The audit gives you the plan. This repo gives you the pieces to build and verify
 
 Once you have your architecture from the audit, use these scripts to check readiness and verify outcomes:
 
-1. Copy the optional configuration template:
+1. Clone the repository and copy the optional configuration template:
 
    ```bash
+   git clone https://github.com/dannyzafir/operator-stack.git
+   cd operator-stack
    cp .env.example .env
    chmod 600 .env
    ```
@@ -160,9 +162,9 @@ The newsletter is the primary next step for readers who want to keep moving from
 
 ## Foreground Tax diagnostic
 
-If your business is carrying Foreground Tax—if growth still depends on you staying personally involved in every step—take the [Stack Audit](https://www.dannyzafir.com/stack/audit) to map where the tax lives and get a personalized architecture.
+If your business is carrying Foreground Tax—if growth still depends on you staying personally involved in every step—two tools help you place it:
 
-The [Foreground Tax diagnostic](https://www.dannyzafir.com/a) maps where the tax lives. The Stack Audit builds your architecture from that diagnosis.
+The [Foreground Tax diagnostic](https://www.dannyzafir.com/a) maps where the tax lives. The [Stack Audit](https://www.dannyzafir.com/stack/audit) builds your architecture from that diagnosis.
 
 ## License
 
