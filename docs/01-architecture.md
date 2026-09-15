@@ -139,4 +139,4 @@ Jobs run independently. One failing job should never cascade into another. Verif
 3. **Least privilege.** Scripts run with the minimum permissions necessary. No sudo unless explicitly required and justified.
 4. **Audit trail.** Every significant change produces a git commit. The commit message describes what changed and why.
 
-These principles serve as defaults. Follow them even if a dedicated SECURITY.md is not present in this repo.
+These principles serve as defaults, and are also written up in [SECURITY.md](../SECURITY.md).

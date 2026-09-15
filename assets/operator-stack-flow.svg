@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fb7185"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="720" fill="#020617"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+
+  <!-- title -->
+  <text x="40" y="44" fill="#f8fafc" font-size="20" font-weight="700">The Operator Stack — how it works, and why yours is not mine</text>
+  <text x="40" y="66" fill="#94a3b8" font-size="11">Audit → your architecture → your profile → verified in the background. Every arrow is a real command.</text>
+
+  <!-- ===== arrows (drawn early, behind boxes) ===== -->
+  <!-- audit -> rules -->
+  <line x1="300" y1="200" x2="360" y2="200" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- rules -> three outcomes -->
+  <path d="M 620 170 C 660 170, 660 120, 700 120" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="200" x2="700" y2="200" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 620 230 C 660 230, 660 280, 700 280" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- outcomes -> profile -->
+  <path d="M 900 120 C 940 120, 940 200, 980 200" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="900" y1="200" x2="980" y2="200" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 900 280 C 940 280, 940 200, 980 200" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- profile -> hermes (down) -->
+  <line x1="1070" y1="270" x2="1070" y2="380" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <!-- hermes -> doctor (left) -->
+  <line x1="980" y1="440" x2="800" y2="440" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <!-- doctor -> verify -->
+  <line x1="620" y1="440" x2="560" y2="440" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <!-- verify -> reality (dashed rose) -->
+  <line x1="380" y1="440" x2="300" y2="440" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-rose)"/>
+  <!-- reality -> operator, only on failure -->
+  <path d="M 170 400 C 170 350, 170 330, 170 316" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow-rose)"/>
+  <rect x="92" y="290" width="156" height="26" rx="4" fill="#0f172a" stroke="#fb7185" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="170" y="307" fill="#fb7185" font-size="9" font-weight="700" text-anchor="middle">ping the operator — only on failure</text>
+
+  <!-- ===== STEP 1: Audit ===== -->
+  <rect x="40" y="130" width="260" height="140" rx="6" fill="#0f172a"/>
+  <rect x="40" y="130" width="260" height="140" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="56" y="152" fill="#22d3ee" font-size="9" font-weight="700">1 · STACK AUDIT</text>
+  <text x="56" y="172" fill="#f8fafc" font-size="12" font-weight="700">14 plain questions</text>
+  <text x="56" y="192" fill="#cbd5e1" font-size="9">Setup · What it should do</text>
+  <text x="56" y="206" fill="#cbd5e1" font-size="9">Models &amp; money · Trust &amp; reliability</text>
+  <text x="56" y="228" fill="#94a3b8" font-size="8">No account. No tracking.</text>
+  <text x="56" y="240" fill="#94a3b8" font-size="8">Answers never leave the browser.</text>
+  <text x="56" y="258" fill="#64748b" font-size="8">dannyzafir.com/stack/audit</text>
+
+  <!-- ===== STEP 2: Rules ===== -->
+  <rect x="360" y="130" width="260" height="140" rx="6" fill="#0f172a"/>
+  <rect x="360" y="130" width="260" height="140" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="376" y="152" fill="#a78bfa" font-size="9" font-weight="700">2 · FIXED RULES, NOT AN AI</text>
+  <text x="376" y="172" fill="#f8fafc" font-size="12" font-weight="700">Your answers decide</text>
+  <text x="376" y="192" fill="#cbd5e1" font-size="9">privacy boundary → where compute lives</text>
+  <text x="376" y="206" fill="#cbd5e1" font-size="9">existing subscriptions → premium tier</text>
+  <text x="376" y="220" fill="#cbd5e1" font-size="9">cost of silent failure → verification</text>
+  <text x="376" y="234" fill="#cbd5e1" font-size="9">how many businesses → profiles</text>
+  <text x="376" y="258" fill="#64748b" font-size="8">Every choice comes with its reason.</text>
+
+  <!-- ===== STEP 3: three possible architectures ===== -->
+  <rect x="700" y="96" width="200" height="48" rx="6" fill="#0f172a"/>
+  <rect x="700" y="96" width="200" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="714" y="116" fill="#f8fafc" font-size="11" font-weight="700">Local-only</text>
+  <text x="714" y="132" fill="#cbd5e1" font-size="8">data stays on your machine · $0 infra</text>
+
+  <rect x="700" y="176" width="200" height="48" rx="6" fill="#0f172a"/>
+  <rect x="700" y="176" width="200" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="714" y="196" fill="#f8fafc" font-size="11" font-weight="700">Cloud VPS</text>
+  <text x="714" y="212" fill="#cbd5e1" font-size="8">runs while your laptop is off · $5–20/mo</text>
+
+  <rect x="700" y="256" width="200" height="48" rx="6" fill="#0f172a"/>
+  <rect x="700" y="256" width="200" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="714" y="276" fill="#f8fafc" font-size="11" font-weight="700">VPS + local node</text>
+  <text x="714" y="292" fill="#cbd5e1" font-size="8">always-on jobs + reach your own files</text>
+
+  <text x="700" y="86" fill="#fbbf24" font-size="9" font-weight="700">3 · YOUR ARCHITECTURE (one of)</text>
+
+  <!-- ===== STEP 4: Profile ===== -->
+  <rect x="980" y="130" width="180" height="140" rx="6" fill="#0f172a"/>
+  <rect x="980" y="130" width="180" height="140" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="996" y="152" fill="#34d399" font-size="9" font-weight="700">4 · YOUR PROFILE</text>
+  <text x="996" y="172" fill="#f8fafc" font-size="12" font-weight="700">Downloaded files</text>
+  <text x="996" y="192" fill="#cbd5e1" font-size="9">SOUL.md · config.yaml</text>
+  <text x="996" y="206" fill="#cbd5e1" font-size="9">cron/jobs.json · README</text>
+  <text x="996" y="228" fill="#94a3b8" font-size="8">Jobs arrive switched OFF.</text>
+  <text x="996" y="240" fill="#94a3b8" font-size="8">Nothing runs before you read it.</text>
+  <text x="996" y="258" fill="#64748b" font-size="8">hermes profile install ./ops</text>
+
+  <!-- ===== Verification loop (bottom band) ===== -->
+  <rect x="40" y="340" width="1120" height="200" rx="12" fill="none" stroke="#fb7185" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="56" y="362" fill="#fb7185" font-size="9" font-weight="700">THE LOOP THAT KEEPS YOU OUT OF THE SHOT</text>
+
+  <!-- Hermes -->
+  <rect x="980" y="380" width="180" height="120" rx="6" fill="#0f172a"/>
+  <rect x="980" y="380" width="180" height="120" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="996" y="402" fill="#34d399" font-size="9" font-weight="700">5 · HERMES RUNS IT</text>
+  <text x="996" y="422" fill="#f8fafc" font-size="12" font-weight="700">Automation</text>
+  <text x="996" y="442" fill="#cbd5e1" font-size="9">Backup verification</text>
+  <text x="996" y="456" fill="#cbd5e1" font-size="9">Silent failure watch</text>
+  <text x="996" y="470" fill="#cbd5e1" font-size="9">Notes review (propose only)</text>
+  <text x="996" y="490" fill="#64748b" font-size="8">Telegram · Desktop · Terminal</text>
+
+  <!-- doctor.sh -->
+  <rect x="620" y="400" width="180" height="80" rx="6" fill="#0f172a"/>
+  <rect x="620" y="400" width="180" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="636" y="422" fill="#34d399" font-size="9" font-weight="700">doctor.sh</text>
+  <text x="636" y="442" fill="#f8fafc" font-size="12" font-weight="700">Is it ready?</text>
+  <text x="636" y="462" fill="#cbd5e1" font-size="9">PASS · WARN · FAIL</text>
+
+  <!-- verify.sh -->
+  <rect x="380" y="400" width="180" height="80" rx="6" fill="#0f172a"/>
+  <rect x="380" y="400" width="180" height="80" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="396" y="422" fill="#34d399" font-size="9" font-weight="700">verify.sh</text>
+  <text x="396" y="442" fill="#f8fafc" font-size="12" font-weight="700">Did it actually work?</text>
+  <text x="396" y="462" fill="#cbd5e1" font-size="9">outcome, not exit code</text>
+
+  <!-- reality -->
+  <rect x="80" y="400" width="220" height="80" rx="6" fill="#0f172a"/>
+  <rect x="80" y="400" width="220" height="80" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="96" y="422" fill="#fb7185" font-size="9" font-weight="700">REALITY</text>
+  <text x="96" y="442" fill="#f8fafc" font-size="12" font-weight="700">The corroborating fact</text>
+  <text x="96" y="462" fill="#cbd5e1" font-size="9">remote advanced · file landed · report sent</text>
+
+  <text x="60" y="520" fill="#94a3b8" font-size="9">Green = the job says it ran.  Rose = a separate check proves it changed something true.  You hear about it only when the two disagree.</text>
+
+  <!-- ===== footer: four layers ===== -->
+  <text x="40" y="590" fill="#f8fafc" font-size="11" font-weight="700">Four layers of an unattended system</text>
+  <g font-size="9">
+    <rect x="40" y="604" width="260" height="56" rx="6" fill="#0f172a" stroke="#22d3ee" stroke-width="1"/>
+    <text x="52" y="624" fill="#22d3ee" font-weight="700">1 Automation</text>
+    <text x="52" y="640" fill="#cbd5e1">make the work happen</text>
+    <rect x="320" y="604" width="260" height="56" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="332" y="624" fill="#a78bfa" font-weight="700">2 Guardrails</text>
+    <text x="332" y="640" fill="#cbd5e1">safe sync · no force push · paused by default</text>
+    <rect x="600" y="604" width="260" height="56" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="612" y="624" fill="#fbbf24" font-weight="700">3 Observability</text>
+    <text x="612" y="640" fill="#cbd5e1">logs · timestamps · "it ran"</text>
+    <rect x="880" y="604" width="280" height="56" rx="6" fill="#0f172a" stroke="#fb7185" stroke-width="1"/>
+    <text x="892" y="624" fill="#fb7185" font-weight="700">4 Verification</text>
+    <text x="892" y="640" fill="#cbd5e1">"it changed something true"</text>
+  </g>
+  <text x="40" y="694" fill="#64748b" font-size="8">github.com/dannyzafir/operator-stack · Audit and scripts tested end-to-end on a clean install, 15 Sep 2026.</text>
+</svg>
