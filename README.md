@@ -49,10 +49,13 @@ Each looked healthy from the outside. Each produced a concrete verification rule
 | `scripts/doctor.sh` | Check whether required prerequisites and selected optional components are ready |
 | `scripts/verify.sh` | Verify that an expected outcome actually occurred |
 | `scripts/git-sync-safe.sh` | Synchronize clean Git histories without force or silent overwrite |
+| `docs/00-how-the-audit-decides.md` | Show which audit answer changes which part of your recommended stack |
 | `docs/01-architecture.md` | Explain the reference architecture and its safety boundaries |
 | `docs/08-what-breaks.md` | Record the four incidents and the rules they produced |
 | `docs/09-verification.md` | Show reusable verification patterns |
+| `assets/operator-stack-flow.svg` | Diagram of the audit → architecture → profile → verify loop |
 | `.env.example` | Document the small set of configuration values the scripts consume |
+| `SECURITY.md` | State the security principles the scripts follow, and how to report a false PASS |
 
 ## Architecture overview
 
@@ -66,6 +69,22 @@ local files           versioned repositories         schedules and agents
 The machines do not directly sync files. GitHub carries reviewed history between them. Each Hermes project profile can isolate routing and credentials, while outcome checks remain separate from the jobs they verify.
 
 See [docs/01-architecture.md](docs/01-architecture.md) for the full model.
+
+![How the Operator Stack fits together: audit, your architecture, your profile, and the verify loop](assets/operator-stack-flow.svg)
+
+### If your audit result does not match the diagram
+
+The Mac ↔ GitHub ↔ VPS diagram above is **one** reference configuration — mine. The Stack Audit may hand you something different: local-only with no VPS, VPS-only with no local execution node, a desktop app instead of Telegram.
+
+That is fine. Nothing in `scripts/` assumes the diagram.
+
+- `doctor.sh` checks the machine it runs on. It does not care whether a second machine exists.
+- `verify.sh` checks an outcome — a file, a repository, a backup destination. It does not care which machine produced it.
+- `git-sync-safe.sh` needs one repository and one remote. Where they live is your decision.
+
+Tested on a clean clone with no VPS relationship to this repository: every script ran and every safety stop fired. The architecture is a recommendation. The scripts are the parts, and the parts fit any of the architectures the audit can produce.
+
+If you want to see how the audit decides, and where your answers land, see [docs/00-how-the-audit-decides.md](docs/00-how-the-audit-decides.md).
 
 ## Build your stack first
 
